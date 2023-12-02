@@ -11,7 +11,7 @@ def main():
     print(total_power)
 
 def check_sets(sets):
-    """Checks if any color in all given sets exceed their limit"""
+    """Calculates for minimum color cubes needed in given sets"""
     color_power = {
         'red': 0,
         'green': 0,
