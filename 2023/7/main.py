@@ -20,6 +20,7 @@ def main():
     # wrong 249748891
 
 def calculate_winning_sum(hands):
+    """Calculate total: all the winning bids multiplied by multiplier"""
     total = 0
     multiplier = len(hands)
     print(multiplier)
@@ -29,7 +30,7 @@ def calculate_winning_sum(hands):
     return total
 
 def check_hand_type(cards):
-    """Checks """
+    """Checks each hand type and ranks it 1-7"""
     count = {}
     for card in cards:
         if card in count:
@@ -62,16 +63,15 @@ def custom_sort(a, b):
     card_list = ["2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"]
     if a["type"] > b["type"]:
         return 1
-    elif a["type"] == b["type"]:
+    if a["type"] == b["type"]:
         for a_card in a["cards"]:
             for b_card in b["cards"]:
                 if card_list.index(a_card) > card_list.index(b_card):
                     return 1
-                elif card_list.index(a_card) < card_list.index(b_card):
+                if card_list.index(a_card) < card_list.index(b_card):
                     return -1
         return 0
-    else:
-        return -1
+    return -1
 
 if __name__ == "__main__":
     main()
