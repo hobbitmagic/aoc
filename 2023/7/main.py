@@ -64,12 +64,11 @@ def custom_sort(a, b):
     if a["type"] > b["type"]:
         return 1
     if a["type"] == b["type"]:
-        for a_card in a["cards"]:
-            for b_card in b["cards"]:
-                if card_list.index(a_card) > card_list.index(b_card):
-                    return 1
-                if card_list.index(a_card) < card_list.index(b_card):
-                    return -1
+        for i in range(0, 5):
+            if card_list.index(a["cards"][i]) > card_list.index(b["cards"][i]):
+                return 1
+            if card_list.index(a["cards"][i]) < card_list.index(b["cards"][i]):
+                return -1
         return 0
     return -1
 
