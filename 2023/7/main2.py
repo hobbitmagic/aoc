@@ -1,4 +1,4 @@
-"""Challenge 7A"""
+"""Challenge 7B"""
 
 from functools import cmp_to_key
 
